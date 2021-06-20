@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/*colors
+Zelené
+
+tmavá #0C3932
+střední #1A4E45
+světlá #94B1AC
+nejsvětlejší #CAD8D6
+
+Červené
+tmavá #4E1A23
+světlá  #632E37
+nejsvětlejší #854E58
+*/
+
+html {
+  background-color: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  font-size: 75%;
+  width: 100vw;
+}
+
+main {
+  padding: 15px;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem 0;
+  color: #4e1a23;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: #0c3932;
+  text-align: center;
+}
+
+button,
+.button--large {
+  width: 250px;
+  max-width: 90%;
+  margin-right: calc((100% - 250px) / 2);
+  margin-left: calc((100% - 250px) / 2);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  font-size: 100%;
+  text-transform: uppercase;
+  border: 1px solid #94b1ac;
+  border-radius: 5px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #4e1a23, #0c3932);
+  box-shadow: 2px 2px 5px #1a4e45;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+.button--large:hover,
+.button--large:focus {
+  background: linear-gradient(45deg, #632e37, #1a4e45);
+  box-shadow: inset 1px 1px 0 0 #cad8d6;
+}
+
+.button--extra-large {
+  width: 90vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #1a4e45;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #632e37;
+}
+
+/* Checkbox a prohlédnout tisk */
+
+.row-print {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+/* Zpět a pokračovat */
+
+.buttons-row__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.buttons-row {
+  padding-bottom: 1rem;
+}
+
+.button--back {
+  width: 150px;
+  max-width: 90vw;
+  border: 1px solid #0c3932;
+  background: linear-gradient(45deg, #cad8d6, #94b1ac);
+  color: #0c3932;
+  margin: 0;
+}
+
+.button--back:hover,
+.button--back:focus {
+  background: linear-gradient(45deg, #94b1ac, #1a4e45);
+  box-shadow: inset 1px 1px 0 0 #cad8d6;
+}
+
+.button--forward {
+  width: 150px;
+  max-width: 90vw;
+  margin: 0;
+}
+
+/* Lv a dokazy v bance a bonusech */
+
+.link-in-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-in-text p {
+  padding-right: 2rem;
+  margin: 0;
+  text-align: left;
+}
+
+/* Hvězdičky ve formulářích */
+
+.valid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #0c3932;
+}
+
+.valid span {
+  align-self: center;
+  font-size: 90%;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Formátování */
+
+.object-no-display {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.important-text {
+  font-size: 125%;
+  margin: 0;
+  padding: 1rem 0;
+  color: #4e1a23;
+  text-align: center;
+  font-weight: bold;
+}
+
+.margin {
+  margin-top: 30px;
+}
+
+@media (min-width: 740px) {
+  body {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .important-text {
+    font-size: 150%;
+  }
+
+  .button--small {
+    width: 150px;
+  }
+
+  .button--back {
+    margin-right: 30px;
+  }
+
+  .buttons-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .button--extra-large {
+    width: 330px;
+    margin-right: 30px;
+    margin-left: calc(100% - 360px);
+  }
+
+  .buttons-row__buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+
+  .link-in-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link-in-text p {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 980px) {
+  html {
+    background-color: #cad8d6;
+  }
+
+  body {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  h1 {
+    font-size: 200%;
+    margin: 0;
+    padding: 1rem 0;
+  }
+}

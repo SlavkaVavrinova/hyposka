@@ -1,0 +1,123 @@
+.logo {
+  height: 4rem;
+}
+
+.logo:hover {
+  height: 4.2rem;
+}
+
+.main-nav {
+  display: flex;
+  padding: 0 15px;
+  height: 4rem;
+  background-color: #0c3932;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__logo {
+  flex: 0 0 20%;
+  padding-left: 5px;
+}
+
+.navigation__mobile {
+  flex: 0 0 20%;
+}
+
+.navigation__large {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-image: url('./img/menu.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger:hover {
+  height: 3.2rem;
+  background-image: url('./img/menu.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.links-mobile {
+  position: absolute;
+  top: 4rem;
+  left: 75%;
+  width: 25%;
+}
+
+.navigation__mobile a {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c3932;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-bottom: 0.5px dashed #ffffff;
+  text-align: center;
+}
+
+.navigation__mobile a:hover {
+  background-color: #632e37;
+}
+
+@media screen and (min-width: 540px) {
+  .logo {
+    height: 7rem;
+  }
+
+  .logo:hover {
+    height: 7.2rem;
+  }
+
+  .main-nav__logo {
+    padding-left: 30px;
+  }
+
+  .navigation__large {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 60%;
+    align-items: center;
+    color: #ffffff;
+    justify-content: flex-end;
+    font-size: 150%;
+    font-weight: 500;
+  }
+
+  .navigation__large a {
+    display: block;
+    color: #ffffff;
+    padding: 8% 6%;
+    font-size: 75%;
+    width: 25%;
+  }
+  .navigation__large a:hover {
+    background-image: url('./img/hover.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #0c3932;
+  }
+
+  .navigation__mobile {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    padding: 0;
+    height: 8rem;
+    background-color: #0c3932;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,82 @@
+.form-costs,
+.annuity__input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10%;
+}
+
+.form-costs__in {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form-costs__minimum {
+  color: #632e37;
+  font-size: 200%;
+  padding-left: 1rem;
+}
+
+.annuity__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.annuity__plan {
+  align-items: center;
+}
+
+.annuity__input input,
+.form-costs input,
+.form-costs select {
+  margin-left: 1rem;
+}
+
+.form-costs__container-minimum {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+table {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: right;
+}
+
+th {
+  background-color: #0c3932;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #cad8d6;
+}
+
+.plan-arrows {
+  display: flex;
+  justify-content: center;
+}
+
+.plan-pages {
+  text-align: center;
+}
+
+.plan-arrows img {
+  width: 4rem;
+}
+
+@media (min-width: 540px) {
+  .annuity__plan {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 740px) {
+  .second-buttons-for-mobile {
+    display: none;
+  }
+}

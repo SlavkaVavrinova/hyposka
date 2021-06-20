@@ -1,0 +1,37 @@
+.mapa__marker button {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.mapboxgl-popup {
+  z-index: 1;
+}
+
+button.mapboxgl-popup-close-button {
+  width: 2rem;
+}
+
+.mapa__filter select {
+  margin-left: 1rem;
+}
+
+.container__map-icons img {
+  height: 3rem;
+}
+.container__map-icons {
+  display: flex;
+  justify-content: space-around;
+}
+.map-icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+@media (min-width: 550px) {
+  .container__map {
+    display: flex;
+    justify-content: space-between;
+  }
+}

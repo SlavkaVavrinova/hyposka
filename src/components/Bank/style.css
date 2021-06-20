@@ -1,0 +1,31 @@
+.button__print {
+  width: 60vw;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 100%;
+  text-transform: uppercase;
+  border: 1px solid #94b1ac;
+  border-radius: 5px;
+  /* background-color: #1a4e45;*/
+  background: linear-gradient(45deg, #4e1a23, #0c3932);
+  color: #ffffff;
+}
+
+.button__print {
+  background: linear-gradient(45deg, #632e37, #1a4e45);
+  box-shadow: inset 1px 1px 0 0 #cad8d6;
+}
+
+@media (min-width: 540px) {
+  .button__print {
+    width: 30%;
+    padding: 1rem;
+    font-size: 100%;
+  }
+
+  .button__print:hover {
+    width: 30%;
+  }
+}
