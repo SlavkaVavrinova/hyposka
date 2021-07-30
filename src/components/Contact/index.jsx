@@ -8,6 +8,7 @@ import slavka from './img/slavka.jpg';
 import verca from './img/veru.jpg';
 import email from './img/email.svg';
 import github from './img/git.svg';
+import czechitas from './img/logo-czechitas-small.png';
 import './style.css';
 
 export const Contact = () => {
@@ -74,6 +75,33 @@ export const Contact = () => {
         >
           <Veru />
         </ContactCard>
+        <p className="important-text">
+          Appka hypoška vznikla jako závěrečný projekt{' '}
+          <a
+            href="https://www.czechitas.cz/tema/digitalni-akademie"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Digitální akademie: Web
+          </a>{' '}
+          v Českých Budějovicích 2021.
+        </p>
+        <div className="czechitas">
+          <a href="https://www.czechitas.cz" target="_blank" rel="noreferrer">
+            <img
+              className="czechitas__logo"
+              src={czechitas}
+              alt="logo Czechitas"
+            />
+          </a>{' '}
+          <p>Chceme poděkovat všem lektorům a koučům za vše!</p>
+        </div>
+
+        <p className="important-text">
+          Největší dík patří naší mentorce Hance Kubincové za neskutečnou ochotu
+          a pomoc při zpracování Appky Hypošky!
+        </p>
+
         <p className="text-center">Máš pro nás radu? Napiš, budeme rády!</p>
         <FormContact />
       </main>

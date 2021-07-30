@@ -5,8 +5,6 @@ import React, { useEffect, useState } from 'react';
 import { db } from './../../db';
 import firebase from 'firebase/app';
 import validator from 'validator';
-import SMap from 'react-map-gl';
-import JAK from 'react-map-gl';
 
 export const FormMap = () => {
   const [name, setName] = useState('');
@@ -76,15 +74,15 @@ export const FormMap = () => {
   }, [phone]);
 
   useEffect(() => {
-    let center = SMap.Coords.fromWGS84(14.1, 50.1);
-    let m = new SMap(JAK.gel('m'), center);
-    m.addDefaultLayer(SMap.DEF_BASE).enable();
+    let center = window.SMap.Coords.fromWGS84(14.1, 50.1);
+    let m = new window.SMap(window.JAK.gel('m'), center);
+    m.addDefaultLayer(window.SMap.DEF_BASE).enable();
     m.addDefaultControls();
 
     // naseptavac
     let inputEl = document.querySelector('#naseptavac');
-    let suggest = new SMap.Suggest(inputEl, {
-      provider: new SMap.SuggestProvider({
+    let suggest = new window.SMap.Suggest(inputEl, {
+      provider: new window.SMap.SuggestProvider({
         updateParams: (params) => {
           /*
             tato fce se vola pred kazdym zavolanim naseptavace,
