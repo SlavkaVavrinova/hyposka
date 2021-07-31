@@ -5,16 +5,24 @@ import { db } from './../../db';
 import firebase from 'firebase/app';
 import validator from 'validator';
 
+import ReCAPTCHA from 'react-google-recaptcha';
+
 export const FormContact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
 
+  const [recaptcha, setRecaptcha] = useState(false);
+
+  const onChange = () => {
+    setRecaptcha(true);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (responseEmail && name && message) {
+    if (responseEmail && name && message && recaptcha === true) {
       db.collection('kontakt')
         .add({
           name: name,
@@ -36,7 +44,9 @@ export const FormContact = () => {
       setEmail('');
       setMessage('');
     } else {
-      setResponse('Doplňte chybějící požadované údaje');
+      setResponse(
+        'Doplňte chybějící požadované údaje a zaškrtněte, že nejste robot.',
+      );
     }
   };
 
@@ -73,6 +83,11 @@ export const FormContact = () => {
           value={message}
           onChange={(event) => setMessage(event.target.value)}
           rows={5}
+        />
+        <ReCAPTCHA
+          sitekey="6LfeONEbAAAAALQzCl3o22xBWND0mj3UBERgzv7S"
+          onChange={onChange}
+          value={recaptcha}
         />
         <button className="button--large">Odeslat</button>
 

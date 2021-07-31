@@ -50,6 +50,11 @@ export const Map = () => {
             <p>{viewPerson.comment}</p>
           </>
         )}
+        <p className="important-text">Ano, v mapě zatím nikdo není.</p>
+        <p>
+          To není chyba, není to rozbité. Pouze budeš první, kdo ostatním předá
+          doporučení na supr osobu, která pomůže s hypotékou.
+        </p>
 
         <h3>Zadej poradce</h3>
         <p>Jsi spokojen se zpracovatelem hypotéky. Zadej svou zkušenost.</p>

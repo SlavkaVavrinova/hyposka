@@ -6,6 +6,8 @@ import { db } from './../../db';
 import firebase from 'firebase/app';
 import validator from 'validator';
 
+import ReCAPTCHA from 'react-google-recaptcha';
+
 export const FormMap = () => {
   const [name, setName] = useState('');
   const [select, setSelect] = useState('bankéř');
@@ -18,10 +20,16 @@ export const FormMap = () => {
   const [coordinates, setCoordinates] = useState([]);
   const [town, setTown] = useState('');
 
+  const [recaptcha, setRecaptcha] = useState(false);
+
+  const onChange = () => {
+    setRecaptcha(true);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (responseEmail && name && comment) {
+    if (responseEmail && name && comment && address && recaptcha === true) {
       db.collection('poradci')
         .add({
           name: name,
@@ -53,7 +61,9 @@ export const FormMap = () => {
       setAddress('');
       setComment('');
     } else {
-      setResponse('Dopňte chybějící požadované údaje');
+      setResponse(
+        'Dopňte chybějící požadované údaje a zaškrtněte, že nejste robot.',
+      );
     }
   };
 
@@ -159,7 +169,9 @@ export const FormMap = () => {
           onChange={(event) => setEmail(event.target.value.trim())}
         />
 
-        <label className="form-map__address">Zadej adresu</label>
+        <label className="form-map__address">
+          Zadej adresu <span className="required">*</span>
+        </label>
         <input
           id="naseptavac"
           value={address}
@@ -178,7 +190,11 @@ export const FormMap = () => {
           onChange={(event) => setComment(event.target.value)}
           rows={5}
         />
-
+        <ReCAPTCHA
+          sitekey="6LfeONEbAAAAALQzCl3o22xBWND0mj3UBERgzv7S"
+          onChange={onChange}
+          value={recaptcha}
+        />
         <button className="button--large">Odeslat</button>
         <p>{response}</p>
       </form>

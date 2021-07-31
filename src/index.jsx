@@ -23,6 +23,10 @@ import { SecondNav } from './components/SecondNav';
 import { Print } from './components/Print/index';
 import ScrollToTop from './components/ScrollToTop';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-5RT7LC64LG');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 export const App = () => {
   const [listToPrint, setListToPrint] = useState({});
   const addToPrint = (componentName, isSelected) => {
