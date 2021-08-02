@@ -12,12 +12,6 @@
   align-items: flex-end;
 }
 
-.form-costs__minimum {
-  color: #632e37;
-  font-size: 200%;
-  padding-left: 1rem;
-}
-
 .annuity__input {
   display: flex;
   flex-direction: column;
@@ -35,9 +29,15 @@
 
 .form-costs__container-minimum {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: baseline;
+  justify-content: space-between;
   padding-right: 10%;
+}
+
+.form-costs__minimum {
+  color: #632e37;
+  padding-left: 0.5rem;
+  font-size: 100%;
 }
 
 table {
@@ -69,9 +69,27 @@ tr:nth-child(even) {
   width: 4rem;
 }
 
+@media (min-width: 350px) {
+  .form-costs__container-minimum {
+    justify-content: flex-end;
+  }
+
+  .form-costs__minimum {
+    padding-left: 1rem;
+  }
+}
+
 @media (min-width: 540px) {
   .annuity__plan {
     align-self: flex-end;
+  }
+
+  .form-costs__minimum {
+    font-size: 200%;
+  }
+
+  .calculator-result-label {
+    font-size: 125%;
   }
 }
 

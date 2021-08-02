@@ -96,6 +96,14 @@ a:focus {
   color: #632e37;
 }
 
+.button--extra-large a {
+  color: #ffffff;
+}
+
+.button--extra-large a:hover {
+  color: #ffffff;
+}
+
 /* Checkbox a prohlédnout tisk */
 
 .row-print {

@@ -23,7 +23,7 @@ export const HypoCalculator = () => {
 
   return (
     <>
-      <h2>HYPOŠKALKULAČKA</h2>
+      <h2 id="hyposkalkulacka">HYPOŠKALKULAČKA</h2>
       <p>
         <strong>Nejsem banka, nemohu ti hypotéku slíbit.</strong> Mohu ti ukázat
         <strong> základní výpočet</strong>, který by měla banka jistě dodržet.
@@ -160,7 +160,9 @@ export const HypoCalculator = () => {
       </div>
       <div className="form-costs__container-minimum">
         <p>
-          <strong>Celkové životní minimum je</strong>
+          <strong className="calculator-result-label">
+            Celkové životní minimum je
+          </strong>
         </p>
         <p className="form-costs__minimum">{`${livingMinimum} Kč`}</p>
       </div>
@@ -193,7 +195,9 @@ export const HypoCalculator = () => {
         </label>
       </div>
       <div className="form-costs__container-minimum">
-        <strong>Výše splátky nové hypotéky může být</strong>
+        <strong className="calculator-result-label">
+          Hypotéka může být přibližně
+        </strong>
         <p className="form-costs__minimum">{`${restForMortgage} Kč`}</p>
       </div>
     </>

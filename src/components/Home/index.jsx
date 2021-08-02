@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { HashLink } from 'react-router-hash-link';
 
 import mortgage from './img/object.svg';
 import income from './img/income.svg';
@@ -35,6 +36,18 @@ export const Home = () => {
           <strong> Já ti poskytnu informace</strong> na co se připravit, jak to
           proběhne, co vzít s sebou na první návštěvu banky a na co dát pozor.
         </p>
+        <div className="link-in-text">
+          <p> Chci přeskočit jen na nastránku s </p>
+          <p>
+            <HashLink
+              smooth
+              to="/vydaje#hyposkalkulacka"
+              className="important-text"
+            >
+              HYPOŠKALKULAČKOU
+            </HashLink>
+          </p>
+        </div>
         <h2 className="home-h">Co tě v appce čeká?</h2>
 
         <div className="container__img">

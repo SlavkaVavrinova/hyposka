@@ -48,6 +48,7 @@ export const Costs = (props) => {
           </div>
         </p>
         <AnnuityCalculator />
+
         <div className="buttons-row__buttons">
           <Link to="/prijem">
             <button className="button--back">Zpět</button>
@@ -56,6 +57,10 @@ export const Costs = (props) => {
             <button className="button--forward">Pokračovat</button>
           </Link>
         </div>
+
+        <button className="button--extra-large">
+          <Link to="/">Domovská stránka</Link>
+        </button>
       </main>
     </>
   );

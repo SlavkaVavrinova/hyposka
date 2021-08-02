@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 import copyright from './img/c.svg';
 import logo from './img/logo-footer.svg';
@@ -20,7 +21,9 @@ export const Footer = () => {
       </CookieConsent>
 
       <footer>
-        <img className="footer__logo" src={logo} alt="Logo" />
+        <Link to="/">
+          <img className="footer__logo" src={logo} alt="Logo" />
+        </Link>
         <div className="footer__text">
           <img className="footer__copyright" src={copyright} alt="Copyright" />
           <p> 2021 Slávka a Verča</p>
