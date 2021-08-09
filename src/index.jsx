@@ -24,7 +24,7 @@ import { Print } from './components/Print/index';
 import ScrollToTop from './components/ScrollToTop';
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('G-5RT7LC64LG');
+ReactGA.initialize('UA-186222996-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 export const App = () => {
